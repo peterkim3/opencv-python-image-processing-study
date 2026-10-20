@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // F5 로 현재 열려 있는 챕터 파일을 실행/디버그한다.
+            // cwd 를 파일이 있는 폴더로 맞춰 'images/...' 상대 경로가 동작하고,
+            // PYTHONPATH 로 공용 Common 과 header 모듈을 찾게 한다.
+            "name": "Python: 현재 챕터 파일",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder};${workspaceFolder}/chap11/header;${workspaceFolder}/chap12/header"
+            }
+        }
+    ]
+}

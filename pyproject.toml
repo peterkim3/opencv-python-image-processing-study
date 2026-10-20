@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencv-python-imageprocessing"
+version = "0.1.0"
+description = "OpenCV Python 영상처리 교재 실습 코드 (공용 Common 모듈 포함)"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.20",
+    "opencv-python>=4.5",
+    "matplotlib>=3.4",
+]
+
+# 저장소 루트의 Common 패키지 '한 벌'만 배포 대상으로 삼는다.
+# `pip install -e .` 를 실행하면 작업 디렉터리나 터미널 종류와 무관하게
+# `from Common.fft2d import ...` 가 해석된다.
+[tool.setuptools]
+packages = ["Common"]

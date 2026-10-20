@@ -1,0 +1,33 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging / editable install artifacts
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+
+# Share the project-level VS Code setup, ignore personal overrides
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Scratch
+_audit.json
+
+# Large generated model (>100MB, GitHub limit); restore from chap10/knn.xml.zip
+chap10/knn.xml

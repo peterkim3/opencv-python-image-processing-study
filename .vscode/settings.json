@@ -1,0 +1,31 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+
+    // 교재 코드는 'images/foo.jpg' 처럼 챕터 폴더 기준 상대 경로를 쓴다.
+    // 실행 시 작업 디렉터리를 항상 그 파일의 폴더로 맞춰 준다.
+    "python.terminal.executeInFileDir": true,
+
+    // 공용 Common 패키지(루트 1벌)와 챕터별 header 모듈을
+    // 작업 디렉터리와 무관하게 임포트할 수 있도록 경로를 추가한다.
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder};${workspaceFolder}/chap11/header;${workspaceFolder}/chap12/header"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/chap11/header:${workspaceFolder}/chap12/header"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/chap11/header:${workspaceFolder}/chap12/header"
+    },
+
+    // Pylance(IntelliSense)도 같은 경로를 인식하도록 맞춘다.
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}",
+        "${workspaceFolder}/chap11/header",
+        "${workspaceFolder}/chap12/header"
+    ],
+
+    "files.exclude": {
+        "**/__pycache__": true
+    }
+}

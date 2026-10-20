@@ -1,0 +1,20 @@
+# 텍스트 파일은 저장소에 LF로 보관하고, 체크아웃 시 OS 기본값으로 변환한다.
+* text=auto
+
+*.py   text diff=python
+*.md   text
+*.toml text
+*.json text
+*.xml  text
+
+# 이진 리소스는 변환하지 않는다.
+*.png binary
+*.jpg binary
+*.JPG binary
+*.bmp binary
+*.tif binary
+*.gz  binary
+*.mp4 binary
+*.pkl binary
+*.pickle binary
+*.hwp binary
